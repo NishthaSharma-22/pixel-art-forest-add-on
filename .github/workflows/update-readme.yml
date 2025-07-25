@@ -22,7 +22,7 @@ jobs:
           TIMESTAMP=${{ steps.time.outputs.timestamp }}
           sed -i '/<!--forest-start-->/, /<!--forest-end-->/c\
           <!--forest-start-->\n\
-          <img src="https://forest-api-c1xr.onrender.com/random-image?t='"$TIMESTAMP"'" width="300" alt="Random forest pixel art image"/>\n\
+          ![random-forest-pixel-art-image](https://forest-api-c1xr.onrender.com/random-image?t='"$TIMESTAMP"')\n\
           <!--forest-end-->' README.md
 
       - name: Commit and push
